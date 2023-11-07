@@ -178,10 +178,6 @@ figcaption {
         transform: scale(1.05);
     }
 
-    nav li a {
-        padding: 20px 10px;
-    }
-
     a.button, button {
         font-size: 18px;
         padding: 15px 25px;
