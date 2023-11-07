@@ -1,94 +1,77 @@
 html {
     scroll-behavior: smooth;
     font-family: 'Arial', sans-serif;
-    font-size: 18px;  /* Increased for better mobile readability */
+    font-size: 18px;
 }
 
 body {
     background-color: #f4f4f4;
 }
 
-.skip-link {
-    display: block; /* Display by default */
-    padding: 8px 12px;
-    background-color: white; /* Cohesive with the navigation color */
-    color: white; /* Contrast against the background */
-    border: none; /* Removing any default borders */
-    border-radius: 5px; /* Slight rounding for a modern look */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    text-decoration: none; /* Removing underline from the link */
-    position: absolute; /* Using absolute position to position it at the top right corner */
-    top: 60px; /* Providing a slight top margin */
-    left: 10px; /* Providing a slight right margin */
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for all changes */
-    z-index: 10; /* Ensuring it's above other elements */
+#skip {
+    position: absolute;
+    top: 0; 
+    left: -999px; 
+    width: 200px;
+    padding: 10px; 
+    background-color: #000; 
+    color: #fff; 
+    text-align: center; 
+    z-index: 1;
 }
 
-.skip-link:hover {
-    background-color: #3B5998; /* Slightly darker shade on hover */
-    transform: translateY(-2px); /* A subtle lift effect on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Increasing shadow on hover for depth effect */
+#skip:focus {
+    left: 10px; 
+    top: 70px; 
 }
 
-.skip-link:focus {
-    outline: 2px solid #FFF; /* A visible outline on focus for accessibility */
-    outline-offset: 2px; /* A slight spacing around the outline */
-}
-
-/* Navigation styles */
 nav ul {
     list-style-type: none;
     display: flex;
-    justify-content: space-between; /* Adjusted for equal spacing */
-    background-color: #4A90E2;  /* Cohesive color scheme choice */
-    margin: 0; /* Reset margin */
-    padding: 0; /* Reset padding */
+    justify-content: space-between;
+    background-color: #2A70B2; 
+    margin: 0;
+    padding: 0;
 }
 
 nav li {
-    flex: 1; /* Equal space for each li */
-    text-align: center; /* Center the text within each li */
+    flex: 1;
+    text-align: center;
     padding: 15px 0;
     box-sizing: border-box;
 }
 
 nav li a {
-    color: white;
+    color: white; 
     text-decoration: none;
     font-weight: bold;
     transition: all 0.3s ease;
-    display: block;  /* Block ensures entire area is clickable */
+    display: block;
 }
 
 nav li a:hover {
     text-decoration: underline;
 }
 
-nav li a:focus, nav li a.active {
-    border-bottom: 3px solid white;
-    background-color: #357ABD;  /* Cohesive color scheme choice */
-}
-/* Highlight for Pets page */
 nav li.travel {
-    background-color: #3B5998; /* Different background color for Pets */
-    border: 2px solid black; /* Black border for Pets */
+    background-color: #2A4A78;
+    border: 2px solid black;
 }
 
 h1 {
     margin-top: 20px;
-    margin-bottom: 30px; /* Increase bottom margin for better separation */
+    margin-bottom: 30px;
     text-align: center;
-    color: #fff; /* Change text color to white for better contrast with a darker background */
-    background-color: #0077CC; /* Using the nav color as a background to make the text pop */
-    font-size: 2.5rem; /* Increase font size for more emphasis */
-    font-weight: bold; /* Bold for more prominence */
-    letter-spacing: 1.5px; /* Slightly spaced out letters for a more unique feel */
-    padding: 15px 20px; /* Increase padding for a more spacious look */
-    border-radius: 15px; /* Increase border-radius for a more rounded appearance */
-    box-shadow: 0 4px 15px rgba(0, 77, 204, 0.2); /* Add a subtle shadow for depth */
-    border: 3px solid #005799; /* Add a border for more structure, slightly darker than the background */
-    text-transform: uppercase; /* Uppercase for a more unique appearance */
-    transition: transform 0.3s ease; /* Smooth transformation for hover effects */
+    color: #fff;
+    background-color: #0077CC;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    padding: 15px 20px;
+    border-radius: 15px;
+    border: 3px solid #005799;
+    text-transform: uppercase;
+    transition: transform 0.3s ease;
 }
 
 main {
@@ -96,14 +79,13 @@ main {
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15); /* Enhanced shadow for more depth */
 }
 
 main h2 {
-    border-bottom: 3px solid #0077CC; /* Slightly thicker border */
-    padding: 8px 0; /* Adjusted padding */
-    margin: 25px 0; /* Adjusted margin */
-    font-size: 1.9rem; /* Slightly bigger font size */
+    border-bottom: 3px solid #0077CC;
+    padding: 8px 0;
+    margin: 25px 0;
+    font-size: 1.9rem;
 }
 
 img, video {
@@ -111,28 +93,29 @@ img, video {
     max-height: 300px;
     height: auto;
     display: block;
-    margin: 15px 0; /* Increased margin for better spacing */
-    border-radius: 10px; /* Added border radius for a softer look */
+    margin: 15px 0;
+    border-radius: 10px;
 }
 
 figure {
-    margin: 15px 0; /* Adjusted margin */
-    display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Vertical alignment */
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
 }
 
 figcaption {
-    font-size: 1rem; /* Adjusted font size for better visibility */
-    color: #444; /* Darker color for better contrast */
-    margin-left: 15px; /* Spacing between the image/video and the caption */
-    font-style: italic; /* Stylistic choice to distinguish caption */
-    flex: 1; /* Ensures caption takes the rest of the space after the media */
+    font-size: 1rem;
+    color: #444;
+    margin-left: 15px;
+    font-style: italic;
 }
 
-/* Responsive styles */
+
+/* mobile view below */
 @media only screen and (max-width: 600px) {
-    .skip-link {
-        display: none; /* Hide when in mobile view */
+    
+    #skip {
+        display: none;
     }
 
     nav ul {
@@ -142,9 +125,74 @@ figcaption {
     nav li {
         width: 100%;
     }
+
+    body {
+        font-size: 16px;
+    }
+
+    div {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
 }
 
-/* Reduced motion preferences */
+/* tablet view */
+@media only screen and (max-width: 800px) and (min-width: 601px) {
+    nav {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    nav ul {
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    
+    body {
+        font-size: 20px;
+    }
+
+    div:hover {
+        transform: scale(1.03);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    h1 {
+        font-size: 2.8rem;
+        margin-top: 30px;
+    }
+
+    main {
+        gap: 30px;
+    }
+
+    div {
+        padding: 20px;
+    }
+
+    img:hover {
+        transform: scale(1.05);
+    }
+
+    nav li a {
+        padding: 20px 10px;
+    }
+
+    a.button, button {
+        font-size: 18px;
+        padding: 15px 25px;
+    }
+
+    video {
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     *, ::before, ::after {
         animation-delay: -1ms !important;
@@ -158,4 +206,3 @@ figcaption {
         display: none;
     }
 }
-
